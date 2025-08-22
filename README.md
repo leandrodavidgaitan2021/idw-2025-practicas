@@ -1,7 +1,5 @@
-# idw-2025
+# idw-2025 Grupo 
 Practica Introduccion al desarrollo web
-Hola
 
-esto es de la nueva rama
-
-segimos con la nueva rama
+Integrantes:
+    Leandro David Gaitan
