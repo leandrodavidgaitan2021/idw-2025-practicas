@@ -1,0 +1,189 @@
+/*
+============================================
+TABLA DE CONTENIDOS
+============================================
+1. Normalización, Variables y Estilos Globales
+   - Reseteo de estilos (Reset)
+   - Definición de variables (colores, fuentes)
+   - Estilos base para el body, headings y links
+
+2. Componentes Reutilizables
+   - Encabezado (.header)
+   - Navegación (.nav)
+   - Contenido Principal (.main-content)
+   - Pie de página (.footer)
+
+3. Componentes Específicos de Página
+   - Sección de Profesionales (.professionals)
+
+4. Diseño Responsivo (Media Queries)
+   - Ajustes para pantallas pequeñas
+============================================
+*/
+
+
+/* ============================================ */
+/* 1. NORMALIZACIÓN, VARIABLES Y ESTILOS GLOBALES */
+/* ============================================ */
+
+/* Reseteo simple y moderno */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables para un diseño consistente */
+:root {
+  --color-primary: #005a8d; /* Un azul profesional */
+  --color-secondary: #f4f4f4; /* Un gris claro para fondos */
+  --color-text: #333333;
+  --color-white: #ffffff;
+  --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Estilos base para todo el sitio */
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  line-height: 1.6;
+  background-color: var(--color-white);
+}
+
+
+/* ============================================ */
+/* 2. COMPONENTES REUTILIZABLES                 */
+/* ============================================ */
+
+/* ------ Encabezado ------ */
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.header__title {
+  margin-bottom: 1rem;
+}
+
+/* ------ Navegación ------ */
+.nav__list {
+  list-style-type: none; /* Quita los puntos de la lista */
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espacio entre los elementos */
+}
+
+.nav__link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ------ Contenido Principal ------ */
+.main-content {
+  padding: 2rem;
+  min-height: calc(100vh - 250px); /* Asegura que el footer no suba en páginas con poco contenido */
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenido principal */
+}
+
+/* ------ Pie de página ------ */
+.footer {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer__copyright {
+  font-size: 0.9em;
+}
+
+
+/* ============================================ */
+/* 3. COMPONENTES ESPECÍFICOS DE PÁGINA         */
+/* ============================================ */
+
+/* ------ Sección Profesionales (index.html) ------ */
+.professionals {
+  padding-top: 1rem;
+}
+
+.professionals__title {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.professionals__container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea */
+  justify-content: center;
+  gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+.professionals__card {
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  flex-basis: 320px; /* Ancho base de cada tarjeta */
+  flex-grow: 1; /* Permite que crezcan para ocupar el espacio */
+  max-width: 400px;
+}
+
+.professionals__name {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.professionals__specialty {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* ------ Sección Genérica de Página (index.html) ------ */
+.page-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.page-section__title {
+  color: var(--color-primary);
+}
+
+
+/* ============================================ */
+/* 4. DISEÑO RESPONSIVO (Media Queries)         */
+/* ============================================ */
+
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  /* Cambia la navegación a una columna en pantallas pequeñas */
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+}
