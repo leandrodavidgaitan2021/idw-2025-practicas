@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif; /* Fuente legible */
+  margin: 0; /* Quitar margen por defecto */
+  padding: 0; /* Quitar relleno por defecto */
+  background-color: #f4f4f4; /* Fondo claro */
+}
+
+h1 {
+  color: #333; /* Color de texto oscuro */
+  text-align: center; /* Centrar el texto */
+  padding: 20px 0; /* Relleno para mejor espaciado */
+}
+
+.clase-main {
+  padding: 20px; /* Relleno para mejor espaciado */
+  background-color: white; /* Fondo blanco para el contenido principal */
+  max-width: 1200px; /* Ancho máximo para mejor legibilidad */
+  margin: auto; /* Centrar el contenido principal */
+}
+
+/*  Clase clase-navbar */
+.clase-navbar ul li a {
+  background-color: #4caf50; /* Fondo verde */
+  overflow: hidden; /* Limpiar flotados */
+}
+.clase-navbar ul li a:hover {
+  background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+.clase-navbar ul li a {
+  display: block; /* Hacer que el enlace ocupe todo el ítem de la lista */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrar el texto */
+  padding: 14px 16px; /* Relleno para un área de clic más cómoda */
+  text-decoration: none; /* Quitar el subrayado de los enlaces */
+}
+.clase-navbar {
+  background-color: #333; /* Fondo oscuro para la barra de navegación */
+  overflow: hidden; /* Limpiar flotados */
+}
+.clase-navbar ul {
+  list-style-type: none; /* Quitar estilo de lista por defecto */
+  margin: 0; /* Quitar margen por defecto */
+  padding: 0; /* Quitar relleno por defecto */
+  display: flex; /* Usar flexbox para un diseño horizontal */
+}
+
+/* Clase clase-footer */
+.clase-footer {
+  background-color: #333; /* Fondo oscuro para el pie de página */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrar el texto */
+  padding: 10px 0; /* Relleno para mejor espaciado */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
